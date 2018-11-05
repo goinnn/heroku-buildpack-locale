@@ -36,7 +36,7 @@ getEncoding () {
   esac
   echo $encoding
 }
-
+echo -e "`ls -lsa $BUILD_DIR/`"
 langs=`cat $BUILD_DIR/.locales`
 if [ ${#langs[@]} == 0 ]; then
   puts_warn "No lang values found. Nothing to do."
